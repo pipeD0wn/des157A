@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript basic Challenges: Challenge 9</title>
+</head>
+<body>
+    <h1>JavaScript Basic Challenges</h1>
+    <h2>Challenge 9</h2>
+
+    <script>
+        var color = prompt("you got a favorite color?", " ");
+
+        if(color == "red" || color == "Red" || color == "yellow" || color == "Yellow" || color == "blue" || color == "Blue" ){
+            console.log(`${color} is a primary color!`);
+        }
+        else if(color == "purple" || color == "Purple" || color == "orange" || color == "Orange" || color == "green" || color == "Green" ){
+            console.log(`${color} is a secondary color!`);
+        }
+        else{
+            console.log(`${color} is not a primary or secondary color!`);
+        }
+
+        //of if you didnt want to think about all the ways users can type in something lmao 
+        /*var color = prompt("you got a favorite color?", " ").toLowerCase;
+        if(color == "red" || color == "yellow" || color == "blue" ){
+            console.log(`${color} is a primary color!`);
+        }
+        else if(color == "purple" || color == "orange" || color == "green"){
+            console.log(`${color} is a secondary color!`);
+        }
+        else{
+            console.log(`${color} is not a primary or secondary color!`);
+        }*/
+    </script>
+</body>
+</html>

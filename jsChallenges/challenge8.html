@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript basic Challenges: Challenge 8</title>
+</head>
+<body>
+    <h1>JavaScript Basic Challenges</h1>
+    <h2>Challenge 8</h2>
+
+    <script>
+        var number = prompt("give me a whole number!", " ");
+
+        if(number < 10){
+            console.log(`${number} is less than 10...`);
+            for(var i=0 ; i <10; i++){
+                if(i == number){
+                    console.log(`...and so is ${i}. <-- Hey look, your number!`)
+                }
+                else{
+                    console.log(`...and so is ${i}.`)
+                }
+            }
+        }
+        else if(number > 10 || number == 10){
+            console.log("WOAH, big number!");
+        }
+        else{
+            console.log(`...${number} is not a number silly`);
+        }
+    </script>
+</body>
+</html>
