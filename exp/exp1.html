@@ -10,11 +10,24 @@
     <h2>Experiment 1</h2>
 
     <script>
-        /*here is the basis of my experiment: */
+        /*here is the basis of my experiment: I want to play around with the string functions. uppercase and lowercase randomization*/
 
         //sequence
-        //selection
-        //loop
+        var words = prompt("write some words and we'll r-r-remix it up!", "");
+        var remix = "";
+
+        //loop (a simple for loop that uses the .length function so that users can input a string as long as they like)
+        for(var i = 0; i < words.length; i++){
+        //selection of if or else, choosing which letters to capitalize or lowercase based on even or odd logic using the moderator tool :)
+            if (i % 2 == 0) {
+                remix += words[i].toUpperCase();
+            } else {
+                remix += words[i].toLowerCase();
+            }
+        }
+//figuring out to add both my variables, not just with a + sign but as an assignment too with the = was the part that took me longest here
+        console.log(`${remix} <---Funky no?`);
+        console.log("refresh the page to mix some other words up!");
     </script>
 </body>
 </html>
