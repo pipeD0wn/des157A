@@ -1,7 +1,5 @@
 /* mobile view */
 body{
-    width: 100%;
-    min-width: 0;
     padding: 0.5em;
     background: url('images/grid.png') repeat-y;
 }
@@ -98,29 +96,38 @@ header {
 }
 
 header h1{
-    font-size: 1.8em;
-    text-align: center;
+  font-family: "Kranky", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  text-align: center;
 }
 
 header h2{
-    font-size: 1em;
-    text-align: center;
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
 }
 
 nav{
-    width: 100%;
-    text-align: center;
-    padding: 0.5em 0;
-    border-bottom: 2px solid #6392ff;
+  font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
+  border-bottom: 2px solid #6392ff;
 }
 
 nav ul{
-    list-style-type: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5em;
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
 }
 
 nav a{
@@ -152,7 +159,13 @@ section{
   margin-bottom: 1em;
 }
 
+section:hover{
+  background: #aacbff;
+}
 section h2 {
+  font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   display: inline-block;
   background: #ffe8a3;
   padding: 0.2em 0.5em;
@@ -162,12 +175,18 @@ section h2 {
 }
 
 section ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 footer{
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.5em;
   background: #ffc5d7; 
   max-width: none;       
