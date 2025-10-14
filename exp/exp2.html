@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+
+    <style>
+        .blue { color: rgb(8, 8, 138); }
+		.red { color: rgb(166, 2, 2); }
+        .yellow { color: rgb(169, 155, 64);}
+        .green { color: green; }
+		.orange { color: orange; }
+        .purple { color: purple;}
+        .pink { color: pink }
+    </style>
+    
+</head>
+<body>
+    <h1>Experiment 2 - using DOM and Functions in JavaScript</h1>
+    <h2>Wonder if this would look good in color?!</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quos corrupti quia sit error omnis provident nobis numquam quo magni nesciunt deserunt quidem, deleniti voluptatibus nostrum possimus, obcaecati incidunt unde.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quos corrupti quia sit error omnis provident nobis numquam quo magni nesciunt deserunt quidem, deleniti voluptatibus nostrum possimus, obcaecati incidunt unde.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quos corrupti quia sit error omnis provident nobis numquam quo magni nesciunt deserunt quidem, deleniti voluptatibus nostrum possimus, obcaecati incidunt unde.</p>
+
+    <script>
+        //need string to change to all lower case
+        //if else statements based on color choice
+        //for loop about choosing color and changing colot
+        //function returns color string
+        //loop 
+
+        //i want the user to answer a prompt about color and the text of the paragraphs changes to that color.
+        function chooseColor(){
+            var answer = prompt('what is your favorite primary color?','');
+            return answer.toLowerCase();
+        }
+        
+        function colorChoice(userColor){
+            var colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]; 
+
+            for (var i = 0; i < colors.length; i++) {
+                if (userColor == colors[i]) {
+                    return true;  
+                }
+            }
+            return false;
+        }
+        
+        function applyColor(userColor, colorYes){
+            var paragraphs = document.querySelectorAll('p');
+            var heading = document.querySelector('h2');
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = userColor;
+            }
+
+            if (colorYes) { 
+                heading.innerHTML = "Make it ALL " + userColor + "!";
+                    for (var i = 0; i < paragraphs.length; i++) {
+                        paragraphs[i].style.color = userColor;
+                    }
+            } else {
+                heading.innerHTML = "We don't know that color.";
+                console.log("The color '" + userColor + "' is not on the list.");
+            }
+        }
+
+        var color = chooseColor();
+        var yesChange = colorChoice(color)
+
+        applyColor(color, yesChange);
+    </script>
+</body>
+</html>
