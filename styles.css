@@ -41,8 +41,24 @@ main.grid {
   gap: 40px;
 }
 
+.journal{
+  background-color: rgb(210, 159, 137);
+}
+
+.journal h1{
+  text-align: center;
+  color: rgb(36, 124, 127);
+  font-size: 3em;
+  border-bottom: rgb(188, 239, 239);
+  border-top: rgb(210, 159, 137);
+  border-style:dotted;
+}
+
+
 .grid section {
   background: rgba(60, 60, 60, 0.55); 
+  margin: 35px;
+  padding: 25px;
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
@@ -51,11 +67,20 @@ main.grid {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+#post{
+  text-align: left;
+}
+
+#post:hover{
+  transform: scale(1);
+  background-color: rgba(60, 60, 60, 0.55); 
+}
+
 .grid section h2 {
   font-family: "Bagel Fat One", cursive;
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color:rgb(121, 65, 121);
+  color:rgb(150, 226, 233);
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
@@ -93,7 +118,7 @@ main.grid {
 .grid section:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  background-color: rgba(240, 164, 139, 0.3);
+  background-color: rgba(15, 23, 109, 0.3);
 }
 
 footer {
