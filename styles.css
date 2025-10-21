@@ -2,7 +2,7 @@ body {
   height: 100%;
   margin: 0;
   background: transparent;
-  font-family: "Coming Soon", cursive, system-ui, sans-serif;
+  font-family: "Coming Soon", sans-serif, system-ui, sans-serif;
 }
 
 #bgVideo {
@@ -24,12 +24,12 @@ body {
 }
 
 #banner header h2 {
-  font-family: "Coming Soon", cursive;
+  font-family: "Coming Soon", sans-serif;
   color: #ddd;
 }
 
 #banner header h1 {
-  font-family: "Bagel Fat One", cursive;
+  font-family: "Bagel Fat One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 5em;
   color:pink;
   letter-spacing: 1px;
@@ -78,7 +78,7 @@ main.grid {
 }
 
 .grid section h2 {
-  font-family: "Bagel Fat One", cursive;
+  font-family: "Bagel Fat One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color:rgb(150, 226, 233);
