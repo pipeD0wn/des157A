@@ -19,7 +19,8 @@ body {
   background: rgba(40, 40, 40, 0.6); 
   backdrop-filter: blur(8px);
   text-align: center;
-  padding: 60px, auto, 20px, auto;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 #banner header h2 {
@@ -67,11 +68,11 @@ main.grid {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#post{
+#post-1, #post-2{
   text-align: left;
 }
 
-#post:hover{
+#post-1, #post-2:hover{
   transform: scale(1);
   background-color: rgba(60, 60, 60, 0.55); 
 }
