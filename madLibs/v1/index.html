@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <title>MadLibs — Design V1</title>
+</head>
+
+<body>
+  <div id="gus" data-message="Squeak! Make sure you fill everything out!"></div>
+  <header>
+    <h1>Crazy Cooking with Gus!</h1>
+  </header>
+  
+  <main>
+    <h2>Shopping List for Gus’s Next Recipe</h2>
+    <p>Fill out each blank to help Gus cook his crazy meal!</p>
+    
+    <div class="stack">
+      <section id="page1" class="page visible">
+        <h3>Recipe Info</h3>
+          <form id="recipe">
+            <label for="properNoun">Name your recipe (proper noun):</label>
+            <input id="properNoun" type="text" required placeholder="e.g., Spaghetti">
+
+            <label for="servesNumber">How many humans does it serve?</label>
+            <input id="servesNumber" type="number" required placeholder="e.g., 4">
+
+            <label for="servesAdj">Describe those humans (adjective):</label>
+            <input id="servesAdj" type="text" required placeholder="e.g., hungry">
+
+            <button type="button" class="next">Next →</button>
+          </form>
+      </section>
+
+      <section id="page2" class="page hidden">
+        <h3>Ingredients</h3>
+          <form id="ingredients">
+            <label for="tomatoNoun">A noun (for “a whole ___ of an ingredient):</label>
+            <input id="tomatoNoun" type="text" required placeholder="e.g., can">
+
+            <label for="pastaAdj">An adjective (for an ingredient):</label>
+            <input id="pastaAdj" type="text" required placeholder="e.g., squiggly">
+
+            <label for="food">A type of food:</label>
+            <input id="food" type="text" required placeholder="e.g., cheese">
+
+            <label for="unit">A unit of measurement:</label>
+            <input id="unit" type="text" required placeholder="e.g., cups">
+
+            <label for="onionAdj">An adjective:</label>
+            <input id="onionAdj" type="text" required placeholder="e.g., tiny">
+
+            <button type="button" class="next">Next →</button>
+          </form>
+      </section>
+
+      <section id="page3" class="page hidden">
+        <h3>Skills Needed</h3>
+        <form id="directions">
+          <label for="verbIng">A verb ending in “-ing”:</label>
+          <input id="verbIng" type="text" required placeholder="e.g., squishing">
+
+          <label for="bodyPart">A body part:</label>
+          <input id="bodyPart" type="text" required placeholder="e.g., elbows">
+
+          <label for="place">A place:</label>
+          <input id="place" type="text" required placeholder="e.g., Rome">
+
+          <label for="spiceAdj">An adjective:</label>
+          <input id="spiceAdj" type="text" required placeholder="e.g., zesty">
+
+          <label for="exclamation">An exclamation:</label>
+          <input id="exclamation" type="text" required placeholder="e.g., Voilà!">
+
+          <label for="abstractNoun">An abstract noun (emotion, trait, etc.):</label>
+          <input id="abstractNoun" type="text" required placeholder="e.g., joy">
+
+          <input type="submit" value="Cook it up!">
+        </form>
+      </section>
+    </div>
+
+    <section id="recipe-overlay" class="hidden">
+      <h2>Togther We Made...</h2>
+      
+      <article class="recipe-card">
+        <h2>The ___ Recipe</h2>
+        <p>Serves ___ ___ humans.</p>
+        <h3>Ingredients</h3>
+          <ul>
+            <li>A whole ____ of tomatoes</li>
+            <li>____ cups of ____ pasta</li>
+            <li>2 cups of ____</li>
+            <li>3 ____ of water</li>
+            <li>2 ____ onions, diced</li>
+          </ul>
+
+          <h3>Directions</h3>
+          <ol>
+            <li>Start by ____ the tomatoes with your ____.</li>
+            <li>Set a pot on the stove and fill with water. Add all ingredients into the pot and
+                simmer until your kitchen is smelling just like ____!</li>
+            <li>Plate and top with your favorite ____ spice.</li>
+            <li>Shout ____ to enhance the flavor and serve with lots of ____.</li>
+            <li>Enjoy!</li>
+          </ol>
+        </article>
+
+      <button id="reset">
+        Make another with me?
+      </button>
+
+    </section>
+
+  </main>
+</body>
+</html>
