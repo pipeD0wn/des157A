@@ -17,8 +17,8 @@ body {
   position: fixed;
   left: 30px;
   bottom: 20px;
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   background: url("images/gus.png") center/contain no-repeat;
   animation: tilt 6s ease-in-out infinite;
   transform-origin: 50% 90%;
@@ -28,8 +28,8 @@ body {
 
 @keyframes tilt {
   0%, 100% { transform: rotate(0deg); }
-  25%      { transform: rotate(-4deg); }
-  75%      { transform: rotate(4deg); }
+  25%      { transform: rotate(-6deg); }
+  75%      { transform: rotate(6deg); }
 }
 
 #gus::after {
@@ -72,8 +72,11 @@ header {
 }
 
 header h1 {
-  font-size: 1.6em;
-  color: #3a2c2a;
+  font-family: "Love Ya Like A Sister", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5em;
+  color: #2c3b68;
 }
 
 main {
@@ -87,7 +90,6 @@ main {
   position: relative;     
   width: 420px;
   height: 560px;
-  background: url("images/notebook.png") center/cover no-repeat;
   filter: drop-shadow(0 8px 25px rgba(0,0,0,.25));
 }
 
@@ -143,7 +145,7 @@ input[type="number"]:focus {
   box-shadow: 0 0 6px #d9a67a;
 }
 
-.next,
+.next1, .next2,
 input[type="submit"] {
   display: block;
   width: 100%;
@@ -157,7 +159,7 @@ input[type="submit"] {
   transition: transform 0.2s ease;
 }
 
-.next:hover,
+.next1:hover, .next2:hover,
 input[type="submit"]:hover {
   transform: scale(1.05);
 }
@@ -165,10 +167,12 @@ input[type="submit"]:hover {
 #recipe-overlay{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.4);
+  background: rgb(218, 205, 205);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 12px;
   z-index: 10;
 }
 
@@ -180,7 +184,7 @@ input[type="submit"]:hover {
 #recipe-overlay article {
   width: 700px;
   height: 500px;
-  background: url("images/card.png") center/cover no-repeat, #fffaf6;
+  background: linear-gradient(180deg, #f9f6ef 0%, #b6b1a6 100%);
   border-radius: 12px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
   padding: 50px 60px;
@@ -188,15 +192,48 @@ input[type="submit"]:hover {
   color: #3a2c2a;
 }
 
+#recipe-overlay h1,
+#recipe-overlay .overlay-title { 
+  position: static;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 #recipe-overlay h2 {
   margin-bottom: 10px;
-  font-size: 1.6em;
+  font-size: 2.6em;
+  font-weight: 500;
+  color:rgb(39, 2, 20);
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #recipe-overlay h3 {
   margin-top: 20px;
   margin-bottom: 6px;
-  font-size: 1.1em;
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #404090;
+}
+
+#recipe-overlay h2,
+#recipe-overlay h3,
+.recipe-card h2,
+.recipe-card h3 {
+  border-bottom: 2px solid #6a89ca;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.75em;
+  text-align: left;
+}
+
+
+#recipe-overlay h2,
+#recipe-overlay h3 {
+  text-align: center;
 }
 
 #recipe-overlay p,
@@ -211,18 +248,20 @@ input[type="submit"]:hover {
 }
 
 #reset {
-  margin-top: 20px;
+  margin-top: 2em;
+  margin-bottom: 0;
   padding: 8px 12px;
   background: #f9c98a;
   border: none;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  align-self: center;
+  position: static;
 }
 
 #reset:hover {
-  background-color: #ffd07a;
+  background-color: #b4d2ff;
 }
 
 @media (max-width: 1260px) {
