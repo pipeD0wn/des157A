@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Every Pictures - A Collage of Stories</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div id="text">
+      <header id="intro">
+        <h1>Every Picture: HTML & CSS Only</h1>
+        <p>This version turns the stump photo into a little scavenger hunt. There are hidden hotspots on top of the image. Later on, clicking those spots will reveal collage pieces.</p>
+        <p id="hint">Move your mouse around the stump. See what you can find to investigate!</p>
+      </header>
+    </div>
+
+    <div id="tester-wrap">
+      <button id="previewBtn">Show collage preview</button>
+    </div>
+
+    <div class="scene">
+      <div id="stump-box">
+        <img src="images/home.jpg" alt="Mossy forest stump" id="base">
+        <svg id="hitmap" viewBox="0 0 500 655" xmlns="http://www.w3.org/2000/svg">
+          <ellipse class="hotspot" id="spot1" cx="178.5" cy="333" rx="37.5" ry="37" />
+          <ellipse class="hotspot" id="spot2" cx="351.5" cy="290" rx="37.5" ry="37" />
+          <ellipse class="hotspot" id="spot3" cx="90.5"  cy="547" rx="37.5" ry="37" />
+          <ellipse class="hotspot" id="spot4" cx="265.5" cy="144" rx="37.5" ry="37" />
+          <ellipse class="hotspot" id="spot5" cx="319.5" cy="496" rx="37.5" ry="37" />
+          <ellipse class="hotspot" id="spot6" cx="430"  cy="210" rx="30" ry="30" />
+        </svg>
+      </div>
+
+      <div id="collage-layer">
+        <img id="bird" class="collage hidden" src="images/bird.png" alt="bird">
+        <img id="bkgrnd" class="collage hidden" src="images/bkgrnd.png" alt="background texture">
+        <img id="butterfly" class="collage hidden" src="images/butterfly.png" alt="butterfly">
+        <img id="change" class="collage hidden" src="images/change.png" alt="change text">
+        <img id="clover" class="collage hidden" src="images/clover.png" alt="clover">
+        <img id="comes" class="collage hidden" src="images/comes.png" alt="comes text">
+        <img id="connect" class="collage hidden" src="images/connect.png" alt="connect">
+        <img id="connected" class="collage hidden" src="images/connected.png" alt="connected text">
+        <img id="daisy" class="collage hidden" src="images/daisy.png" alt="daisy">
+        <img id="damsels" class="collage hidden" src="images/damsels.png" alt="dragonflies">
+        <img id="darkGreen" class="collage hidden" src="images/darkGreen.png" alt="dark green wallpaper">
+        <img id="fern" class="collage hidden" src="images/fern.png" alt="fern">
+        <img id="goes" class="collage hidden" src="images/goes.png" alt="goes text">
+        <img id="ivy" class="collage hidden" src="images/ivy.png" alt="ivy">
+        <img id="leaves" class="collage hidden" src="images/leaves.png" alt="leaves">
+        <img id="lily" class="collage hidden" src="images/lily.png" alt="lily">
+        <img id="listen" class="collage hidden" src="images/listen.png" alt="listen text">
+        <img id="necessary" class="collage hidden" src="images/necessary.png" alt="necessary text">
+        <img id="orangeShroom" class="collage hidden" src="images/orangeShroom.png" alt="orange mushroom">
+        <img id="overthink" class="collage hidden" src="images/overthink.png" alt="don't overthink it">
+        <img id="pillar" class="collage hidden" src="images/pillar.png" alt="tree rings">
+        <img id="shrooms" class="collage hidden" src="images/shrooms.png" alt="little mushrooms">
+        <img id="snail" class="collage hidden" src="images/snail.png" alt="snail">
+        <img id="stump" class="collage hidden" src="images/stump.png" alt="extra stump photo">
+        <img id="template" class="collage hidden" src="images/template.png" alt="template piece">
+        <img id="theWay" class="collage hidden" src="images/theWay.png" alt="nature finds a way text">
+        <img id="tree" class="collage hidden" src="images/tree.png" alt="tree illustration">
+      </div>
+    </div>
+
+    <div id="story">
+      <article class="trunk">
+        <h2>Change</h2>
+        <p>A caterpillar must endure much change in order to finally become a butterfly. Change is necessary for growth, and as painful or scary as it may feel, you cannot flourish without it.</p>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
