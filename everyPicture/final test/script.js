@@ -55,17 +55,28 @@
         slot3.classList.add("showimage");
     });
 
-    // SCROLL EVENTS
+    // SCROLL EVENTS: run when the story window scrolls AND when the page scrolls
     scrollBox.addEventListener("scroll", function() {
         updateActiveFromScroll();
     });
 
-    function updateActiveFromScroll() {
-        const boxMiddle = scrollBox.scrollTop + scrollBox.clientHeight / 2;
+    window.addEventListener("scroll", function() {
+        updateActiveFromScroll();
+    });
 
-        const step1Middle = step1.offsetTop + step1.offsetHeight / 2;
-        const step2Middle = step2.offsetTop + step2.offsetHeight / 2;
-        const step3Middle = step3.offsetTop + step3.offsetHeight / 2;
+    function updateActiveFromScroll() {
+        // look at the visible area of the story box in the viewport
+        const boxRect = scrollBox.getBoundingClientRect();
+        const boxMiddle = boxRect.top + boxRect.height / 2;
+
+        // centers of each step in the viewport
+        const rect1 = step1.getBoundingClientRect();
+        const rect2 = step2.getBoundingClientRect();
+        const rect3 = step3.getBoundingClientRect();
+
+        const step1Middle = rect1.top + rect1.height / 2;
+        const step2Middle = rect2.top + rect2.height / 2;
+        const step3Middle = rect3.top + rect3.height / 2;
 
         const dist1 = Math.abs(step1Middle - boxMiddle);
         const dist2 = Math.abs(step2Middle - boxMiddle);
@@ -84,6 +95,7 @@
             activeNumber = 3;
         }
 
+        // clear all active classes
         step1.classList.remove("story-step-active");
         step2.classList.remove("story-step-active");
         step3.classList.remove("story-step-active");
@@ -92,6 +104,7 @@
         hotspot2.classList.remove("hotspot-active");
         hotspot3.classList.remove("hotspot-active");
 
+        // turn on the matching step + hotspot
         if (activeNumber === 1) {
             step1.classList.add("story-step-active");
             hotspot1.classList.add("hotspot-active");
