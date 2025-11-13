@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  font-family: "Advent Pro", sans-serif;
+  background: #021b11;
+  color: #f5f5f5;
+  overflow-y: auto;
+}
+
+h1,
+h2 {
+  font-family: "Frijole", cursive;
+  letter-spacing: 1px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 24px 32px 32px;
+  background: #021b11;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto 12px auto;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  text-align: center;
+}
+
+header .tagline {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 16px auto 0 auto;
+  text-align: right;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* we are hoping for a two-column layout: collage left, story right */
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  gap: 24px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LEFT: collage and main image */
+.base-image {
+  position: relative;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background: none;
+}
+
+.base-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* make all hotspots the same rules here then specify location separate */
+.hotspot {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid rgba(173, 238, 222, 0.4);
+  background: radial-gradient(circle, rgba(166, 255, 240, 0.4) 0%, rgba(56, 163, 165, 0.4) 40%, transparent 75%);
+  cursor: pointer;
+  opacity: 0.25;
+  box-shadow: 0 0 0 0 rgba(144, 238, 220, 0.2);
+  transition: /*thank you chatgpt for this little helpful insert*/
+    opacity 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background 0.25s;
+}
+
+/* manual positions for hotspots (these made me cry lmao) */
+.hotspot-1 {
+  top: 40%;
+  left: 54%;
+}
+
+.hotspot-2 {
+  top: 58%;
+  left: 52%;
+}
+
+.hotspot-3 {
+  top: 76%;
+  left: 55%;
+}
+
+/* she is the STAR with her glowing */
+.hotspot-active {
+  opacity: 1;
+  border-color: #a6fff0;
+  background: radial-gradient(circle, #c1fff6 0%, #46b5a9 40%, transparent 75%);
+  animation: hotspotpulse 1.4s infinite;
+}
+
+@keyframes hotspotpulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(163, 242, 228, 0.9),
+      0 0 16px rgba(99, 235, 210, 1);
+  }
+  100% {
+    box-shadow:
+      0 0 0 18px rgba(163, 242, 228, 0),
+      0 0 4px rgba(99, 235, 210, 0.7);
+  }
+}
+
+/* RIGHT: story panel with scroll box */
+.story {
+  border-radius: 14px;
+  background: #d7f3d8;
+  border: 1px solid #adc9af;
+  padding: 12px;
+  color: #12351a;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.story-step {
+  padding: 14px 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.story-step h2 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+/* active story and hotspot based on scrolling in script */
+.story-step-active {
+  background: rgba(12, 71, 34, 0.12);
+  transform: translateX(-2px);
+}
+
+.story-step-end {
+  margin-bottom: 60px;
+}
+
+/* slot spot for js to drop images into */
+.story-slot {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+/*imagse are invisible until scripted */
+.story-slot img {
+  max-width: 100%;
+  display: block;
+  margin-top: 8px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/*image dissolves in via script later */
+.story-slot.showimage img {
+  opacity: 1;
+}
+
+/* Hide caption */
+.detail-texts {
+  display: none;
+}
+
+/* Responsive so praying for that EXTRA CREDIT */
+
+@media (max-width: 1100px) {
+  main {
+    padding: 20px 20px 24px;
+  }
+
+  .layout {
+    grid-template-columns: 1.4fr 1.1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    display: block;
+  }
+
+  main {
+    padding: 16px 16px 24px;
+  }
+
+  .story-scroll {
+    max-height: none;
+  }
+}
