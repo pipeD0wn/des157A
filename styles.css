@@ -68,11 +68,12 @@ main.grid {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#post-1, #post-2{
+#post{
   text-align: left;
+  line-height: 1.5;
 }
 
-#post-1, #post-2:hover{
+#post:hover{
   transform: scale(1);
   background-color: rgba(60, 60, 60, 0.55); 
 }
@@ -177,12 +178,13 @@ html, body {
 
   h1, h2, h3 {
     font-size: 1.3em;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 
   p {
     font-size: 1em;
     margin: 0.5em 0;
+    text-align: left;
   }
 }
 
