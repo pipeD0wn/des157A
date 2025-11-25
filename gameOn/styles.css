@@ -63,6 +63,12 @@ header a:hover {
   gap: 20px;
 }
 
+.block h2,
+.intro h2 {
+  text-align: center;
+  width: 100%;
+}
+
 #thumbnails {
   display: flex;
   flex-direction: row;
