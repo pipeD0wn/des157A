@@ -30,32 +30,43 @@
     // scroll box
     const scrollBox = document.querySelector(".story-scroll");
 
-    // highlight correct step / hotspot on first load
+    // start with only hotspot 1 visible
+    hotspot2.style.display = "none";
+    hotspot3.style.display = "none";
+
     window.addEventListener("load", function() {
         updateActiveFromScroll();
     });
 
-    // CLICK EVENTS: drop text + image into matching slot
-
+    // CLICK EVENTS
     hotspot1.addEventListener("click", function() {
         slot1.innerHTML =
             "<p>" + caption1 + "</p><img src='" + img1 + "' alt='caterpillar and butterfly detail'>";
         slot1.classList.add("showimage");
+
+        hotspot2.style.display = "block";
+        hotspot1.style.display = "none";
     });
 
     hotspot2.addEventListener("click", function() {
         slot2.innerHTML =
             "<p>" + caption2 + "</p><img src='" + img2 + "' alt='dragonfly detail'>";
         slot2.classList.add("showimage");
+
+        hotspot3.style.display = "block";
+        hotspot2.style.display = "none";
     });
 
     hotspot3.addEventListener("click", function() {
         slot3.innerHTML =
             "<p>" + caption3 + "</p><img src='" + img3 + "' alt='ladybug detail'>";
         slot3.classList.add("showimage");
+
+        // hotspot3 stays visible unless you want it to disappear too
+        // if yes, add: hotspot3.style.display = "none";
     });
 
-    // SCROLL EVENTS: run when the story window scrolls AND when the page scrolls
+    // SCROLL EVENTS
     scrollBox.addEventListener("scroll", function() {
         updateActiveFromScroll();
     });
@@ -65,11 +76,9 @@
     });
 
     function updateActiveFromScroll() {
-        // look at the visible area of the story box in the viewport
         const boxRect = scrollBox.getBoundingClientRect();
         const boxMiddle = boxRect.top + boxRect.height / 2;
 
-        // centers of each step in the viewport
         const rect1 = step1.getBoundingClientRect();
         const rect2 = step2.getBoundingClientRect();
         const rect3 = step3.getBoundingClientRect();
@@ -95,7 +104,6 @@
             activeNumber = 3;
         }
 
-        // clear all active classes
         step1.classList.remove("story-step-active");
         step2.classList.remove("story-step-active");
         step3.classList.remove("story-step-active");
@@ -104,7 +112,6 @@
         hotspot2.classList.remove("hotspot-active");
         hotspot3.classList.remove("hotspot-active");
 
-        // turn on the matching step + hotspot
         if (activeNumber === 1) {
             step1.classList.add("story-step-active");
             hotspot1.classList.add("hotspot-active");

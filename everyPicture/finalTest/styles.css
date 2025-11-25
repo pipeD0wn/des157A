@@ -19,6 +19,18 @@ h2 {
   letter-spacing: 1px;
 }
 
+#green{
+  color: #047e3f;
+}
+
+#teal{
+  color: #0a9ca4;
+}
+
+#blue{
+  color: #1a5097;
+}
+
 main {
   min-height: 100vh;
   padding: 24px 40px 32px;
@@ -41,8 +53,9 @@ header h1 {
 
 header .tagline {
   margin-top: 4px;
-  font-size: 0.9rem;
+  font-size: 1.6em;
   opacity: 0.9;
+  color: #54c38a;
 }
 
 footer {
@@ -99,6 +112,12 @@ footer {
     background 0.25s;
 }
 
+/* start with only hotspot 1 visible */
+.hotspot-2,
+.hotspot-3 {
+  display: none;
+}
+
 /* manual positions for hotspots (these made me cry lmao) */
 .hotspot-1 {
   top: 40%;
@@ -115,15 +134,74 @@ footer {
   left: 55%;
 }
 
-/* glowing active hotspot */
-.hotspot-active {
-  opacity: 1;
-  border-color: #a6fff0;
-  background: radial-gradient(circle, #c1fff6 0%, #46b5a9 40%, transparent 75%);
-  animation: hotspotpulse 1.4s infinite;
+.hotspot-1 {
+  border-color: rgba(166, 255, 200, 0.4);
+  background: radial-gradient(circle,
+    rgba(166, 255, 200, 0.45) 0%,
+    rgba(56, 165, 90, 0.45) 40%,
+    transparent 75%);
 }
 
-@keyframes hotspotpulse {
+.hotspot-1.hotspot-active {
+  opacity: 1;
+  border-color: #a6ffc8;
+  background: radial-gradient(circle,
+    #c1ffe0 0%,
+    #54c38a 40%,
+    transparent 75%);
+  animation: hotspotpulse-green 1.4s infinite;
+}
+
+.hotspot-2 {
+  border-color: rgba(173, 238, 222, 0.4);
+  background: radial-gradient(circle,
+    rgba(166, 255, 240, 0.45) 0%,
+    rgba(56, 163, 165, 0.45) 40%,
+    transparent 75%);
+}
+
+.hotspot-2.hotspot-active {
+  opacity: 1;
+  border-color: #a6fff0;
+  background: radial-gradient(circle,
+    #c1fff6 0%,
+    #46b5a9 40%,
+    transparent 75%);
+  animation: hotspotpulse-teal 1.4s infinite;
+}
+
+.hotspot-3 {
+  border-color: rgba(173, 207, 238, 0.4);
+  background: radial-gradient(circle,
+    rgba(166, 200, 255, 0.45) 0%,
+    rgba(56, 96, 165, 0.45) 40%,
+    transparent 75%);
+}
+
+.hotspot-3.hotspot-active {
+  opacity: 1;
+  border-color: #a6c8ff;
+  background: radial-gradient(circle,
+    #c1d9ff 0%,
+    #4676b5 40%,
+    transparent 75%);
+  animation: hotspotpulse-blue 1.4s infinite;
+}
+
+@keyframes hotspotpulse-green {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(163, 242, 200, 0.9),
+      0 0 16px rgba(99, 235, 150, 1);
+  }
+  100% {
+    box-shadow:
+      0 0 0 18px rgba(163, 242, 200, 0),
+      0 0 4px rgba(99, 235, 150, 0.7);
+  }
+}
+
+@keyframes hotspotpulse-teal {
   0% {
     box-shadow:
       0 0 0 0 rgba(163, 242, 228, 0.9),
@@ -133,6 +211,19 @@ footer {
     box-shadow:
       0 0 0 18px rgba(163, 242, 228, 0),
       0 0 4px rgba(99, 235, 210, 0.7);
+  }
+}
+
+@keyframes hotspotpulse-blue {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(163, 200, 242, 0.9),
+      0 0 16px rgba(99, 150, 235, 1);
+  }
+  100% {
+    box-shadow:
+      0 0 0 18px rgba(163, 200, 242, 0),
+      0 0 4px rgba(99, 150, 235, 0.7);
   }
 }
 
