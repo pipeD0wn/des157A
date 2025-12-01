@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Henny+Penny&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <title>Game On! - V1 Pumpkins</title>
+</head>
+<body>
+    <header>
+        <h1>The Pumpkin Contest</h1>
+    </header>
+
+    <main>
+        <section class="counter">
+            <h2>
+                Day: <div id="number"></div>
+            </h2>
+        </section>
+
+        <section class="game">
+            <article class="p1">
+                <img src="images/#" width="200" height="200" alt="P1: pumpkin stage">
+                <h3>Player One Garden</h3>
+                <p>Pumpkin size: <div id="size"></div></p>
+            </article>
+
+            <section class="actions">
+                <button class="water">Water (+1)</button>
+                <button class="fertilize">Fertilize (+3, skip next turn)</button>
+                <p class="pests">Watch out for pests! (−3)</p>
+            </section>
+
+            <article class="p2">
+                <img src="images/#" width="200" height="200" alt="P2: pumpkin stage">
+                <h3>Player Two Garden</h3>
+            </article>
+        </section>
+
+        <section class="flyer">
+            <p>Grow the BIGGEST pumpkin before the Fall Festival: In 2 weeks!!!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>DES 157A · Code V1 · Piper Egan</p>
+    </footer>
+</body>
+</html>

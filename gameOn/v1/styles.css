@@ -1,0 +1,172 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f3e0c3;
+  font-family: "Advent Pro", sans-serif;
+  color: #4a2b16;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 1200px;
+  height: 750px;
+  background: #ffe6bf;
+  border: 4px solid #d18a42;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header, footer {
+  text-align: center;
+  padding: 8px 0;
+}
+
+header h1 {
+  font-family: "Henny Penny", cursive;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.counter h2 {
+  text-align: left;
+  margin: 0;
+  padding-bottom: 12px;
+
+  border-bottom: 2px solid #d18a42;
+  font-size: 1.6rem;
+  font-family: "Henny Penny", cursive;
+}
+
+.counter #number {
+  display: inline-block;
+  min-width: 40px;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  gap: 230px;
+}
+
+article {
+  text-align: left;
+}
+
+article h3 {
+  margin: 8px 0 4px;
+  font-size: 1.3rem;
+  font-family: "Henny Penny", cursive;
+}
+
+article p {
+  margin: 4px 0;
+}
+
+article #size {
+  display: inline-block;
+  min-width: 36px;
+}
+
+.actions {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #d18a42;
+  background: #fff6e6;
+  cursor: pointer;
+  font-family: "Advent Pro", sans-serif;
+}
+
+button:hover {
+  background: #fcd5a6;
+}
+
+.pests {
+  margin-top: 4px;
+  color: #a03b26;
+}
+
+.flyer {
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid #d18a42;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 749px) {
+  body{
+    margin: 35px;
+    padding: 5px;
+  }
+  main {
+    width: 100%;
+  }
+
+  .game {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  article,
+  .actions {
+    width: 100%;
+    text-align: center;
+  }
+
+  article img {
+    width: 150px;
+    height: auto;
+  }
+
+  article {
+    text-align: left;
+  }
+
+  button {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .counter h2 {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
+  .flyer {
+    font-size: 1rem;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 750px) {
+  .game {
+    flex-direction: row;
+  }
+}
