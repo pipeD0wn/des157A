@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Pumpkin Contest – Final Version</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Advent+Pro:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>The Pumpkin Contest</h1>
+    <p class="tagline">Can you grow the biggest pumpkin before Day 14?</p>
+</header>
+
+<main>
+    <div id="start-screen" class="show">
+        <div class="start-content">
+            <h1>Pumpkin Contest</h1>
+            <p>Grow, protect, or sabotage! You have 14 in-game days to grow the biggest pumpkin!</p>
+            <button id="start-button">Start</button>
+        </div>
+    </div>
+
+    <section class="counter">
+        <h2>Day <span id="day-number">1</span></h2>
+    </section>
+
+    <section class="game">
+        <article class="garden p1">
+            <div id="p1-feedback" class="feedback"></div>
+            <div class="img-wrap"><img id="p1-img" src="images/box.png" alt="Player One pumpkin" width="250" height="250"></div>
+            <h3 id="p1-header">Player One</h3>
+            <p>Pumpkin size: <span id="p1-size">0</span></p>
+        </article>
+
+        <article class="controls">
+            <button class="water">💧 Water +1</button>
+            <button class="fertilize">🌱 Fertilize +3</button>
+            <button class="sabotage">🔥 Sabotage (skip turn)</button>
+            <p class="warning">Pests love fertilizer too. Be Careful... <br> Too much water can decrease pumpkin growth <br> You must lay low after a sabatoage...</p>
+        </article>
+
+        <article class="garden p2">
+            <div id="p2-feedback" class="feedback"></div>
+            <div class="img-wrap"><img id="p2-img" src="images/box.png" alt="Player Two pumpkin" width="250" height="250"></div>
+            <h3 id="p2-header">Player Two</h3>
+            <p>Pumpkin size: <span id="p2-size">0</span></p>
+        </article>
+
+    </section>
+
+    <div id="center-feedback" class="center-feedback"></div>
+
+    <section class="flyer">
+        <p>Grow wisely… or sabotage your rival to win the Fall Festival Pumpkin Contest</p>
+    </section>
+
+    <div id="pests-overlay">
+        <p>Pest attack!</p>
+    </div>
+
+    <div id="end-screen">
+        <div class="end-content">
+            <h1>Congrats to Our 2025 Winner!</h1>
+            <p id="winner-name"></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <div id="particles"></div>
+
+    <audio id="waterAudio" src="audio/water.mp3" preload="auto"></audio>
+    <audio id="fertAudio" src="audio/fertlize.ogg" preload="auto"></audio>
+    <audio id="growthAudio" src="audio/growth.wav" preload="auto"></audio>
+    <audio id="wiltAudio" src="audio/wilt.wav" preload="auto"></audio>
+    <audio id="pestAudio" src="audio/pests.mp3" preload="auto"></audio>
+
+</main>
+
+<footer>
+    <p>DES 157A · Game On! · Piper Egan
+    <br><a href="sources.html">Audio Sources</a> · All images drawn by me!</p>
+</footer>
+</body>
+</html>
